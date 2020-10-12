@@ -9,8 +9,8 @@ public class ClassicCar extends Auto implements Obsluga {
 
 	@Override
 	public void on() {
-		System.out.println("Insert key!");
-		System.out.println("Turn the key!");
+		System.out.println("Key Inserted!");
+		System.out.println("Turn the key on!");
 		this.setRunning(true);
 		System.out.println("Engine is running!");
 	}
@@ -66,7 +66,11 @@ public class ClassicCar extends Auto implements Obsluga {
 		// TODO Auto-generated method stub
 		System.out.println("Hit the brake!");
 		this.setGearNo(getGearNo() - 1);
-		System.out.println("We have neutral gear in!");
+		if (getGearNo() > 0) { 
+			System.out.println("The car is still driving! Gear "+getGearNo()+" is engaged in the car!");
+		} else {
+			System.out.println("We have neutral gear in!");
+		}
 
 	}
 

@@ -11,6 +11,9 @@ public class CarApp {
 		nkc.stop();
 		nkc.off();
 		
+		
+		System.out.println("\n\n\n\n");
+		
 		cc.drive();
 		cc.on();
 		cc.drive();
