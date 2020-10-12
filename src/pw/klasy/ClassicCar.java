@@ -65,11 +65,13 @@ public class ClassicCar extends Auto implements Obsluga {
 	public void stop() {
 		// TODO Auto-generated method stub
 		System.out.println("Hit the brake!");
+		while(getGearNo()>0) {
 		this.setGearNo(getGearNo() - 1);
 		if (getGearNo() > 0) { 
 			System.out.println("The car is still driving! Gear "+getGearNo()+" is engaged in the car!");
 		} else {
 			System.out.println("We have neutral gear in!");
+		}
 		}
 
 	}
